@@ -40,6 +40,7 @@ body {
     transition: 0.3s ease;
 }
 
+/* Only nav links turn green on hover now */
 .nav-menu a:hover {
     color: #42ff6b; 
     text-shadow: 0 0 10px rgba(66, 255, 107, 0.5);
@@ -91,6 +92,11 @@ body {
     gap: 15px;
 }
 
+.tag p {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
 .neon-dot {
     width: 20px;
     height: 20px;
@@ -102,20 +108,6 @@ body {
 .tag-text {
     font-weight: 900;
     font-size: 0.8rem;
-}
-
-/* Email Specific Styling */
-.email-link {
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s;
-    font-weight: 700;
-    word-break: break-all;
-}
-
-.email-link:hover {
-    color: #42ff6b;
-    text-shadow: 0 0 10px rgba(66, 255, 107, 0.5);
 }
 
 .bio-text {
@@ -167,7 +159,7 @@ body {
     object-fit: cover;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .hero-section { flex-direction: column; text-align: center; padding-top: 50px; }
     .category-tags { justify-content: center; }
