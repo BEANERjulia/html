@@ -110,7 +110,7 @@ body {
     color: inherit;
     transition: 0.3s;
     font-weight: 700;
-    word-break: break-all; /* Keeps email from breaking layout on phones */
+    word-break: break-all;
 }
 
 .email-link:hover {
