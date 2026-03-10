@@ -11,6 +11,18 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Email Hover (Non-Link) --- */
+.copy-email {
+    transition: 0.3s ease;
+    cursor: text;
+    font-weight: 700;
+}
+
+.copy-email:hover {
+    color: #42ff6b;
+    text-shadow: 0 0 10px rgba(66, 255, 107, 0.5);
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -158,7 +170,7 @@ body {
     object-fit: cover;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .hero-section { flex-direction: column; text-align: center; padding-top: 50px; }
     .category-tags { justify-content: center; }
