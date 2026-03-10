@@ -40,7 +40,7 @@ body {
     transition: 0.3s ease;
 }
 
-.nav-menu a:hover, .email-link:hover {
+.nav-menu a:hover {
     color: #42ff6b; 
     text-shadow: 0 0 10px rgba(66, 255, 107, 0.5);
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .main-title {
-    font-size: clamp(4rem, 8vw, 8rem); /* Slightly smaller to fit "Selected Works" better */
+    font-size: clamp(3.5rem, 8vw, 8rem);
     line-height: 0.8;
     font-weight: 900;
     color: #e0e0e0;
@@ -110,6 +110,12 @@ body {
     color: inherit;
     transition: 0.3s;
     font-weight: 700;
+    word-break: break-all; /* Keeps email from breaking layout on phones */
+}
+
+.email-link:hover {
+    color: #42ff6b;
+    text-shadow: 0 0 10px rgba(66, 255, 107, 0.5);
 }
 
 .bio-text {
@@ -135,19 +141,17 @@ body {
     filter: grayscale(0%);
 }
 
-/* --- Gallery Grid --- */
+/* Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
     padding: 60px 10%;
-    background-color: #fff;
 }
 
 .photo-item {
     aspect-ratio: 1 / 1; 
     overflow: hidden;
-    background-color: #f9f9f9;
     filter: grayscale(100%);
     transition: 0.5s ease;
 }
