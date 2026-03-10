@@ -131,7 +131,31 @@ body {
 .hero-image:hover {
     filter: grayscale(0%);
 }
+/* Clean Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+    background-color: #fff;
+}
 
+.photo-item {
+    aspect-ratio: 1 / 1; /* Keeps everything as a perfect square */
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents photos from stretching */
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-section { flex-direction: column; text-align: center; }
