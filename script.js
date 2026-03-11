@@ -1,4 +1,4 @@
-// --- CLICK TO ZOOM ---
+// --- CLICK TO ZOOM POP-UP ---
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
@@ -9,20 +9,33 @@ if (lightbox) {
             lightboxImg.src = image.src;
         };
     });
+
     lightbox.onclick = (e) => {
-        if (e.target !== lightboxImg) { lightbox.style.display = 'none'; }
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = 'none';
+        }
     };
 }
 
-// --- YOUR ORIGINAL SLIDESHOW CODE ---
+// --- YOUR ORIGINAL SLIDESHOW SCRIPT ---
 let slideIndex = 1;
-if (document.getElementsByClassName("mySlides").length > 0) { showSlides(slideIndex); }
-function plusSlides(n) { showSlides(slideIndex += n); }
+if (document.getElementsByClassName("mySlides").length > 0) {
+    showSlides(slideIndex);
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  if(slides[slideIndex-1]) { slides[slideIndex-1].style.display = "block"; }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  if(slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";
+  }
 }
