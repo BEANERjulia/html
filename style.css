@@ -1,52 +1,49 @@
-/* --- GALLERY GRID (NO GAPS) --- */
+/* --- YOUR ORIGINAL CSS (KEEP ALL OF IT) --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; overflow-x: hidden; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 40px 10%; }
+.nav-brand { font-weight: 900; font-size: 1.2rem; letter-spacing: -1px; }
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+.nav-menu a { text-decoration: none; color: #666; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; transition: 0.3s ease; }
+.nav-menu a:hover, .email-link:hover { color: #42ff6b; text-shadow: 0 0 10px rgba(66, 255, 107, 0.5); }
+.nav-menu a.active { color: #000; border: 1px solid #000; padding: 8px 15px; }
+.hero-section { display: flex; padding: 0 10%; align-items: center; min-height: 80vh; gap: 50px; }
+.main-title { font-size: clamp(5rem, 10vw, 10rem); line-height: 0.8; font-weight: 900; color: #e0e0e0; margin-bottom: 40px; }
+.outline-text { color: transparent; -webkit-text-stroke: 1px #e0e0e0; }
+
+/* --- THE ADDITION TO LEVEL YOUR IMAGES --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 40px 10%;
+    gap: 20px;
+    padding: 0 10% 80px;
 }
 
 .photo-item {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; /* This makes them perfect squares/leveled */
     overflow: hidden;
     cursor: pointer;
-    background-color: #eee; /* Placeholder color while loading */
 }
 
 .photo-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps images level and filled */
-    transition: transform 0.5s ease;
+    object-fit: cover; /* This prevents stretching */
+    transition: 0.5s ease;
 }
 
 .photo-item:hover img {
-    transform: scale(1.05); /* Subtle zoom */
+    transform: scale(1.05); /* Small zoom on hover */
 }
 
-/* --- LIGHTBOX (THE ZOOM VIEW) --- */
+/* --- THE POP-UP (LIGHTBOX) STYLING --- */
 .lightbox {
     display: none;
     position: fixed;
     z-index: 1000;
-    top: 0; left: 0; 
-    width: 100%; height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
+    justify-content: center; align-items: center;
 }
-
-.lightbox-content {
-    max-width: 85%;
-    max-height: 85%;
-    border: 2px solid #42ff6b;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-}
+.lightbox-content { max-width: 80%; max-height: 80%; }
+.close-btn { position: absolute; top: 20px; right: 40px; color: white; font-size: 50px; cursor: pointer; }
