@@ -1,3 +1,4 @@
+/* --- GLOBAL RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
+/* --- NAVBAR --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -51,7 +52,7 @@ body {
     padding: 8px 15px;
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero-section {
     display: flex;
     padding: 0 10%;
@@ -68,13 +69,13 @@ body {
     font-size: clamp(3.5rem, 8vw, 8rem);
     line-height: 0.8;
     font-weight: 900;
-    color: #e0e0e0;
+    color: #1a1a1a; /* Adjusted for visibility against white bg */
     margin-bottom: 40px;
 }
 
 .outline-text {
     color: transparent;
-    -webkit-text-stroke: 1px #e0e0e0;
+    -webkit-text-stroke: 1px #1a1a1a;
 }
 
 .category-tags {
@@ -110,7 +111,12 @@ body {
     color: #555;
 }
 
-/* Gallery Grid (Leveling) */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- GALLERY GRID --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -134,11 +140,11 @@ body {
 .photo-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* This shows the FULL image inside the box */
-    background-color: #f9f9f9; /* Optional: adds a light gray background to empty space */
+    object-fit: contain;
+    background-color: #f9f9f9;
 }
 
-/* Lightbox Pop-up Styling */
+/* --- LIGHTBOX --- */
 .lightbox {
     display: none;
     position: fixed;
@@ -162,16 +168,12 @@ body {
     color: white;
     font-size: 50px;
     cursor: pointer;
-    
-.profile-img {
-    width: 250px !important; /* Forces the width to stay small */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Centers it if it's on its own line */
-/* --- HIGHLIGHT SECTION STYLES --- */
+}
+
+/* --- BEST WORKS (INDEX PAGE) --- */
 .highlight-section {
     padding: 80px 10%;
-    background-color: #000;
+    background-color: #f9f9f9; /* Contrast background */
 }
 
 .highlight-grid {
@@ -188,13 +190,13 @@ body {
     max-width: 300px;
     height: 400px;
     overflow: hidden;
-    border: 1px solid #333; /* Keeps it clean and structured */
+    border: 1px solid #ddd;
 }
 
 .work-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents stretching */
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
@@ -202,13 +204,12 @@ body {
     transform: scale(1.05);
 }
 
-/* --- THE ULTIMATE CONTACT IMAGE FIX --- */
-/* This specifically targets the profile image on the contact page to keep it small */
-.profile-img, 
-#contact-portrait,
-img[alt="Julia Espindola"] {
-    width: 280px !important; 
-    max-width: 280px !important;
+/* --- CONTACT IMAGE FIX --- */
+/* This specifically forces your profile photo to stay small */
+.profile-img {
+    width: 250px !important;
+    max-width: 250px !important;
     height: auto !important;
     display: block;
+    margin: 20px 0; /* Keeps it on the side */
 }
