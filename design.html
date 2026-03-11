@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design | 2026 Portfolio</title>
+    <title>Design | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,42 +19,23 @@
         </ul>
     </nav>
 
-    <main class="hero-section">
-        <div class="text-content">
-            <h1 class="main-title">Digital<br><span class="outline-text">Canvas</span></h1>
-            <div class="category-tags">
-                <div class="tag">
-                    <span class="neon-dot"></span>
-                    <span class="tag-text">ART</span>
-                    <p>20 Design Projects</p>
-                </div>
-            </div>
-            <p class="bio-text">Exploring layout, typography, and personal expression through digital media.</p>
-        </div>
+    <header class="page-header">
+        <h1 class="main-title">Digital<br><span class="outline-text">Canvas</span></h1>
+    </header>
+
+    <main class="gallery-grid">
+        <div class="photo-item"><img src="images/design2.png" alt="Toon Zone"></div>
+        <div class="photo-item"><img src="images/drink.png" alt="Ad Design"></div>
+        <div class="photo-item"><img src="images/digital2.png" alt="Logo Design"></div>
+        <div class="photo-item"><img src="images/design1.png" alt="Typography"></div>
+        <div class="photo-item"><img src="images/digital.png" alt="Catering Logo"></div>
+        <div class="photo-item"><img src="images/cover1.png" alt="Cover Design"></div>
     </main>
 
-    <section class="gallery-grid">
-        <div class="photo-item"><img src="images/work1.png" alt="Design 1"></div>
-        <div class="photo-item"><img src="images/work2.png" alt="Design 2"></div>
-        <div class="photo-item"><img src="images/work3.png" alt="Design 3"></div>
-        <div class="photo-item"><img src="images/work4.png" alt="Design 4"></div>
-        <div class="photo-item"><img src="images/work5.png" alt="Design 5"></div>
-        <div class="photo-item"><img src="images/work6.png" alt="Design 6"></div>
-        <div class="photo-item"><img src="images/work7.png" alt="Design 7"></div>
-        <div class="photo-item"><img src="images/work8.png" alt="Design 8"></div>
-        <div class="photo-item"><img src="images/work9.png" alt="Design 9"></div>
-        <div class="photo-item"><img src="images/work10.png" alt="Design 10"></div>
-        <div class="photo-item"><img src="images/work11.png" alt="Design 11"></div>
-        <div class="photo-item"><img src="images/work12.png" alt="Design 12"></div>
-        <div class="photo-item"><img src="images/work13.png" alt="Design 13"></div>
-        <div class="photo-item"><img src="images/work14.png" alt="Design 14"></div>
-        <div class="photo-item"><img src="images/work15.png" alt="Design 15"></div>
-        <div class="photo-item"><img src="images/work16.png" alt="Design 16"></div>
-        <div class="photo-item"><img src="images/work17.png" alt="Design 17"></div>
-        <div class="photo-item"><img src="images/work18.png" alt="Design 18"></div>
-        <div class="photo-item"><img src="images/work19.png" alt="Design 19"></div>
-        <div class="photo-item"><img src="images/work20.png" alt="Design 20"></div>
-    </section>
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="script.js"></script>
 </body>
