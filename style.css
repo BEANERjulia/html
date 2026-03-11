@@ -213,33 +213,44 @@ body {
     display: block;
     margin: 20px 0; /* Keeps it on the side */
 /* This section keeps everything in a neat, small row */
+/* --- BOTTOM IMAGES SECTION --- */
 .top-picks-section {
-    padding: 60px 10%;
+    padding: 20px 10% 100px; /* Reduced top padding since title is gone */
     background-color: #fff;
 }
 
 .picks-grid {
-    display: flex; /* This forces them to be side-by-side */
-    gap: 20px;
-    justify-content: flex-start; /* Aligns them to the left */
-    flex-wrap: nowrap; /* Prevents them from stacking vertically */
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .pick-item {
-    width: 200px; /* This is the EXACT size they will stay */
-    height: 250px;
-    overflow: hidden; /* This keeps the zoom effect inside the box */
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    width: 180px; 
+    height: 240px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #f9f9f9; /* This fills the "empty" space since we aren't cropping */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pick-item img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain; /* Shows the WHOLE photo, no cutting off */
-    transition: transform 0.5s ease;
+    /* CHANGED: 'contain' shows the whole photo, 'cover' chops it */
+    object-fit: contain; 
+    transition: 0.3s ease;
 }
 
-.pick-item:hover img {
-    transform: scale(1.1); /* That smooth zoom you like */
+.pick-item img:hover {
+    transform: scale(1.05); /* Keeps your zoom effect */
+}
+
+/* Hero Image Fix */
+.hero-image {
+    max-width: 400px; 
+    height: auto;
+    display: block;
 }
