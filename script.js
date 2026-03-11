@@ -1,4 +1,4 @@
-// --- LIGHTBOX CODE (For Photography & Design Grid) ---
+// LIGHTBOX LOGIC
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
@@ -17,9 +17,11 @@ if (lightbox) {
     };
 }
 
-// --- YOUR SLIDESHOW CODE (For Home/Projects) ---
+// YOUR SLIDESHOW CODE
 let slideIndex = 1;
-if (document.getElementsByClassName("mySlides").length > 0) {
+let slides = document.getElementsByClassName("mySlides");
+
+if (slides.length > 0) {
     showSlides(slideIndex);
 }
 
@@ -35,5 +37,7 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  if(slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";
+  }
 }
