@@ -134,7 +134,8 @@ body {
 .photo-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* This shows the FULL image inside the box */
+    background-color: #f9f9f9; /* Optional: adds a light gray background to empty space */
 }
 
 /* Lightbox Pop-up Styling */
