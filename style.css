@@ -212,4 +212,41 @@ body {
     height: auto !important;
     display: block;
     margin: 20px 0; /* Keeps it on the side */
+/* --- TOP PICKS SECTION --- */
+.top-picks-section {
+    padding: 60px 10% 100px;
+    background-color: #fff;
+}
+
+.picks-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pick-item {
+    width: 180px; /* Forces images to stay small */
+    height: 240px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.pick-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* Keeps the photo looking clean in the box */
+    transition: 0.3s ease;
+}
+
+.pick-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Image Fix - Keeps it from stretching the main section */
+.hero-image {
+    max-width: 400px; /* Adjust this if you want your main hero photo bigger/smaller */
+    height: auto;
+    display: block;
 }
