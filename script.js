@@ -1,4 +1,4 @@
-// LIGHTBOX LOGIC
+// CLICK TO ZOOM LIGHTBOX
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
@@ -10,6 +10,7 @@ if (lightbox) {
         };
     });
 
+    // Close when clicking the X or outside the photo
     lightbox.onclick = (e) => {
         if (e.target !== lightboxImg) {
             lightbox.style.display = 'none';
@@ -17,11 +18,9 @@ if (lightbox) {
     };
 }
 
-// YOUR SLIDESHOW CODE
+// YOUR ORIGINAL SLIDESHOW CODE
 let slideIndex = 1;
-let slides = document.getElementsByClassName("mySlides");
-
-if (slides.length > 0) {
+if (document.getElementsByClassName("mySlides").length > 0) {
     showSlides(slideIndex);
 }
 
