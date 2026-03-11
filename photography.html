@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography | 2026 Portfolio</title>
+    <title>Photography | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,42 +19,21 @@
         </ul>
     </nav>
 
-    <main class="hero-section">
-        <div class="text-content">
-            <h1 class="main-title">Visual<br><span class="outline-text">Archive</span></h1>
-            <div class="category-tags">
-                <div class="tag">
-                    <span class="neon-dot"></span>
-                    <span class="tag-text">COLLECTION</span>
-                    <p>20 Photography Prints</p>
-                </div>
-            </div>
-            <p class="bio-text">A collection of photography captured throughout the 2026 semester.</p>
-        </div>
+    <header class="page-header">
+        <h1 class="main-title">Captured<br><span class="outline-text">Moments</span></h1>
+    </header>
+
+    <main class="gallery-grid">
+        <div class="photo-item"><img src="images/cover2.png" alt="Blue Mood"></div>
+        <div class="photo-item"><img src="images/ali1.png" alt="Ali Portrait 1"></div>
+        <div class="photo-item"><img src="images/ali2.png" alt="Ali Portrait 2"></div>
+        <div class="photo-item"><img src="images/ali3.png" alt="Ali Portrait 3"></div>
     </main>
 
-    <section class="gallery-grid">
-        <div class="photo-item"><img src="images/vibe1.png" alt="Photo 1"></div>
-        <div class="photo-item"><img src="images/vibe2.png" alt="Photo 2"></div>
-        <div class="photo-item"><img src="images/vibe3.png" alt="Photo 3"></div>
-        <div class="photo-item"><img src="images/vibe4.png" alt="Photo 4"></div>
-        <div class="photo-item"><img src="images/vibe5.png" alt="Photo 5"></div>
-        <div class="photo-item"><img src="images/vibe6.png" alt="Photo 6"></div>
-        <div class="photo-item"><img src="images/vibe7.png" alt="Photo 7"></div>
-        <div class="photo-item"><img src="images/vibe8.png" alt="Photo 8"></div>
-        <div class="photo-item"><img src="images/vibe9.png" alt="Photo 9"></div>
-        <div class="photo-item"><img src="images/vibe10.png" alt="Photo 10"></div>
-        <div class="photo-item"><img src="images/vibe11.png" alt="Photo 11"></div>
-        <div class="photo-item"><img src="images/vibe12.png" alt="Photo 12"></div>
-        <div class="photo-item"><img src="images/vibe13.png" alt="Photo 13"></div>
-        <div class="photo-item"><img src="images/vibe14.png" alt="Photo 14"></div>
-        <div class="photo-item"><img src="images/vibe15.png" alt="Photo 15"></div>
-        <div class="photo-item"><img src="images/vibe16.png" alt="Photo 16"></div>
-        <div class="photo-item"><img src="images/vibe17.png" alt="Photo 17"></div>
-        <div class="photo-item"><img src="images/vibe18.png" alt="Photo 18"></div>
-        <div class="photo-item"><img src="images/vibe19.png" alt="Photo 19"></div>
-        <div class="photo-item"><img src="images/vibe20.png" alt="Photo 20"></div>
-    </section>
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="script.js"></script>
 </body>
