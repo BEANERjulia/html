@@ -164,7 +164,7 @@ body {
     cursor: pointer;
     
 .profile-img {
-    width: 280px !important; /* Forces the width to stay small */
+    width: 250px !important; /* Forces the width to stay small */
     height: auto;
     display: block;
     margin: 0 auto; /* Centers it if it's on its own line */
