@@ -1,5 +1,27 @@
+// --- LIGHTBOX CODE (For Photography & Design Grid) ---
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+if (lightbox) {
+    document.querySelectorAll('.photo-item img').forEach(image => {
+        image.onclick = () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = image.src;
+        };
+    });
+
+    lightbox.onclick = (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = 'none';
+        }
+    };
+}
+
+// --- YOUR SLIDESHOW CODE (For Home/Projects) ---
 let slideIndex = 1;
-showSlides(slideIndex);
+if (document.getElementsByClassName("mySlides").length > 0) {
+    showSlides(slideIndex);
+}
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
