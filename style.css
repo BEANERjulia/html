@@ -212,45 +212,34 @@ body {
     height: auto !important;
     display: block;
     margin: 20px 0; /* Keeps it on the side */
-/* --- TOP PICKS SECTION --- */
+/* This section keeps everything in a neat, small row */
 .top-picks-section {
-    padding: 80px 10% 100px;
+    padding: 60px 10%;
     background-color: #fff;
 }
 
 .picks-grid {
-    display: flex;
+    display: flex; /* This forces them to be side-by-side */
     gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligns them to the left */
+    flex-wrap: nowrap; /* Prevents them from stacking vertically */
 }
 
 .pick-item {
-    width: 300px; 
-    height: 400px;
-    overflow: hidden;
-    background-color: #f4f4f4; /* Fills space if the photo is thin */
+    width: 200px; /* This is the EXACT size they will stay */
+    height: 250px;
+    overflow: hidden; /* This keeps the zoom effect inside the box */
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #f9f9f9;
 }
 
 .pick-item img {
-    width: 100%;
-    height: 100%;
-    /* CHANGED: This shows the WHOLE image without cutting it off */
-    object-fit: contain; 
-    transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain; /* Shows the WHOLE photo, no cutting off */
+    transition: transform 0.5s ease;
 }
 
 .pick-item:hover img {
-    transform: scale(1.1); /* The zoom you liked! */
-}
-
-/* --- CONTACT IMAGE FIX --- */
-.profile-img {
-    width: 250px !important;
-    height: auto !important;
-    display: block;
+    transform: scale(1.1); /* That smooth zoom you like */
 }
