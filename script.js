@@ -1,4 +1,4 @@
-// --- CLICK TO ZOOM POP-UP ---
+// Click-to-Zoom Pop-up Logic
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
@@ -10,6 +10,7 @@ if (lightbox) {
         };
     });
 
+    // Close when clicking X or clicking outside the photo
     lightbox.onclick = (e) => {
         if (e.target !== lightboxImg) {
             lightbox.style.display = 'none';
@@ -17,7 +18,7 @@ if (lightbox) {
     };
 }
 
-// --- YOUR ORIGINAL SLIDESHOW SCRIPT ---
+// Your Original Slideshow Script
 let slideIndex = 1;
 if (document.getElementsByClassName("mySlides").length > 0) {
     showSlides(slideIndex);
