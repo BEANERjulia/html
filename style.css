@@ -162,4 +162,10 @@ body {
     color: white;
     font-size: 50px;
     cursor: pointer;
+    
+.profile-img {
+    width: 350px; /* Adjust this number to the exact size you want */
+    height: auto;
+    display: block;
+    margin-bottom: 20px; /* Adds a little space below it */
 }
